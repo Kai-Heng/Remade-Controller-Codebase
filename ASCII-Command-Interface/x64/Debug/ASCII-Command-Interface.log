@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(60,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(104,22): warning C4244: 'initializing': conversion from 'SOCKET' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(144,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(159,67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(193,67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(232,67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(271,67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\main.cpp(310,67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ASCII-Command-Interface.vcxproj -> C:\Users\cceelab\Desktop\tjfriedl\ASCII-Command-Interface\x64\Debug\ASCII-Command-Interface.exe
