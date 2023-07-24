@@ -1,0 +1,11 @@
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\CaptureImageCollector.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\CaptureImageCollector.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\CobotImageCollector.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\CobotImageCollector.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\ImageSplitter.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\ImageSplitter.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\Main.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\Main.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\Image.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\Image.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\ImagePipeline.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\ImagePipeline.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\ImagePipelineHelper.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\ImagePipelineHelper.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\ManualCaptureImageCollector.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\ManualCaptureImageCollector.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\SavedImageCollector.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\SavedImageCollector.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\ImageStitcher.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\ImageStitcher.obj
+C:\Users\cceelab\Desktop\kaiheng9\boreoscope\TimedCaptureImageCollector.cpp;C:\Users\cceelab\Desktop\kaiheng9\boreoscope\x64\Debug\TimedCaptureImageCollector.obj
