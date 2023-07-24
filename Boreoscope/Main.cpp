@@ -475,7 +475,7 @@ void unwrapImage(string imagePath) {
 
     //unwrap
     outImage = eUnw->Unwrap(srcImage);
-    string unwrapLocation = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\unwrap\\" + currentDateTime() + ".bmp";
+    string unwrapLocation = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\remade-controller-codebase\\unwrap\\" + currentDateTime() + ".bmp";
     unwrappedImageLoc.push_back(unwrapLocation);
     outImage.get()->writeToFile(unwrapLocation.c_str());
 }
@@ -521,7 +521,7 @@ void captureImage() {
         camera.GainRaw.SetValue(20);
         //camera.BlackLevelRaw.SetValue(504);
 
-        string path = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\original\\" + currentDateTime() + ".bmp";
+        string path = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\remade-controller-codebase\\original\\" + currentDateTime() + ".bmp";
         capturedImage(camera).saveImage(path.c_str(), ImageFileFormat_Bmp);
 
         camera.Close();
@@ -571,7 +571,7 @@ int main(int argc, char* argv[])
 
                 ostringstream oss;
 
-                oss << "C:\\Users\\cceelab\\Desktop\\kaiheng9\\composite\\composite" << number << ".bmp";
+                oss << "C:\\Users\\cceelab\\Desktop\\kaiheng9\\remade-controller-codebase\\composite\\composite" << number << ".bmp";
                 //string src1 = oss1.str();
                 //string src2 = oss2.str();
                 //string src3 = oss3.str();
@@ -619,7 +619,7 @@ int main(int argc, char* argv[])
                 string imageName;
                 cout << "Image name: ";
                 cin >> imageName;
-                string fileLoc = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\original\\" + imageName + ".bmp";
+                string fileLoc = "C:\\Users\\cceelab\\Desktop\\kaiheng9\\remade-controller-codebase\\original\\" + imageName + ".bmp";
                 unwrapImage(fileLoc);
             }
 
