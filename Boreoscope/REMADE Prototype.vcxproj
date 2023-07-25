@@ -121,7 +121,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
       <AdditionalLibraryDirectories>$(PYLON_DEV_DIR)\lib\x64;C:\Program Files\Tielogic\360Lib Suite\bin;C:\Program Files\Tielogic\360Lib Suite\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);Lib360.lib;OECore.lib;OECore_d.lib;</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);Lib360.lib;OECore.lib;OECore_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
       <DisableSpecificWarnings>26812</DisableSpecificWarnings>
