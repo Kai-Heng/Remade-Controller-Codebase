@@ -37,3 +37,16 @@ bool delete_xml_entry(ofstream& file, const string& entry) {
 
 	return false;
 }
+
+int iterate_channel(int channel) {
+	if (channel < 4) channel++;
+	else channel = 1;
+
+	return channel;
+}
+
+char iterate_column(char column) {
+	if (column < 'D') column++;
+	else column = 'A';
+	return column;
+}

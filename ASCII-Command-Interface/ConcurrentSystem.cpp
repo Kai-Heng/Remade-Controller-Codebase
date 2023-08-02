@@ -18,7 +18,7 @@ const std::string currentDateTime() {
     char buf[200];
 
     localtime_s(&tstruct, &now);
-    strftime(buf, sizeof(buf), "%Y_%m_%d_I_%M_%S", &tstruct);
+    strftime(buf, sizeof(buf), "%Y_%m_%d_%H_%M_%S", &tstruct);
 
     return buf;
 }
@@ -75,8 +75,8 @@ Image captureImageKeyboard(CBaslerUniversalInstantCamera& camera)
     return NULL;
 }
 
-void checkForImageDirectory() {
-    std::string folderName = "image";
+void checkForImageDirectory(std::string startTime) {
+    std::string folderName = startTime;
     fs::path currentPath = fs::current_path();
     fs::path folderPath = currentPath / folderName;
 

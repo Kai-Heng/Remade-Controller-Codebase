@@ -20,6 +20,7 @@
 #include <sstream>
 #include <conio.h>
 #include <windows.h>
+#include <csignal>
 
 #include "ConcurrentSystem.h"
 #include "Image.h"
@@ -33,6 +34,18 @@ using namespace std;
 const char* serverIp = "192.168.0.5";
 int port = 777;
 
+char column = 'A';
+int row = 1;
+int channel_num = 1;
+string randomInput;
+string START_TIME;
+
+/// <summary>
+/// Function returns the time of day. This is currently used for naming images.
+/// </summary>
+/// <param name="tp"></param>
+/// <param name="tzp"></param>
+/// <returns></returns>
 int gettimeofday(struct timeval* tp, struct timezone* tzp)
 {
     // Note: some broken versions only have 8 trailing zero's, the correct epoch has 9 trailing zero's
@@ -53,11 +66,29 @@ int gettimeofday(struct timeval* tp, struct timezone* tzp)
     tp->tv_usec = (long)(system_time.wMilliseconds * 1000);
     return 0;
 }
+
+void signalHandler(int signal) {
+    if (signal == SIGINT) {
+        // Perform cleanup tasks here.
+        cout << "Terminating process... Cleaning up..." << endl;
+        PylonTerminate();
+
+        Sleep(1000);
+
+        exit(signal);
+    }
+}
+
 //Client side
 int main(int argc, char* argv[])
 {
+    // Register the signal handler for SIGINT -> Terminates process properly.
+    signal(SIGINT, signalHandler);
+
+    START_TIME = currentDateTime();
+
     //Check for images directory
-    checkForImageDirectory();
+    checkForImageDirectory(START_TIME);
 
     string aux(argv[0]);
     int pos = aux.rfind('\\');
@@ -123,6 +154,7 @@ int main(int argc, char* argv[])
             cout << "-- Action Commands --\n";
             cout << "1. RUN:SEQUENCE (Photo by photo);\n";
             cout << "2. RUN:SEQUENCE (Full quadrant-cluster capture);\n";
+            cout << "3. RUN:SEQUENCE (Entire face imaging sequence);\n";
 
             cout << "-- Read Commands --\n";
             cout << "9. Exit\n";
@@ -134,7 +166,7 @@ int main(int argc, char* argv[])
             string channel;
             string nnnn;
 
-            if (commands == 1 || commands == 2) {
+            if (commands == 1 || commands == 2 || commands == 3) {
                 data = "RUN:SEQUENCE;";
             }
             else {
@@ -204,12 +236,13 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage(path.c_str(), ImageFileFormat_Bmp);
-                        std::ofstream file(("image/" + currentDateTime() + ".xml").c_str());
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
-                        write_xml_entry(file, "Channel", "1");
+                        write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
+                        iterate_channel(channel_num);
 
                         Sleep(500);
                     }
@@ -243,12 +276,13 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage(path.c_str(), ImageFileFormat_Bmp);
-                        std::ofstream file(("image/" + currentDateTime() + ".xml").c_str());
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
-                        write_xml_entry(file, "Channel", "2");
+                        write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
+                        iterate_channel(channel_num);
 
                         Sleep(500);
                     }
@@ -282,12 +316,13 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage(path.c_str(), ImageFileFormat_Bmp);
-                        std::ofstream file(("image/" + currentDateTime() + ".xml").c_str());
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
-                        write_xml_entry(file, "Channel", "3");
+                        write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
+                        iterate_channel(channel_num);
 
                         Sleep(500);
                     }
@@ -321,12 +356,13 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage(path.c_str(), ImageFileFormat_Bmp);
-                        std::ofstream file(("image/" + currentDateTime() + ".xml").c_str());
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
-                        write_xml_entry(file, "Channel", "4");
+                        write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
+                        iterate_channel(channel_num);
 
                         Sleep(500);
                     }
@@ -341,6 +377,181 @@ int main(int argc, char* argv[])
 
                     cout << "Camera shuttering terminated..." << endl;
                 }
+            }
+            else if (commands == 3) {
+
+                while (row != 18) {
+
+                    cout << "Capturing channel 1...\n";
+
+                    path = getImagePath(aux);
+
+                    camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
+                    camera.TriggerMode.SetValue(TriggerMode_On);
+                    camera.TriggerSource.SetValue(TriggerSource_Software);
+
+                    camera.StartGrabbing(1);
+                    bytesWritten += send(clientSd, (char*)&msg, strlen(msg), 0);
+
+                    while (camera.IsGrabbing())
+                    {
+                        camera.TriggerSoftware.Execute();
+                        CGrabResultPtr ptrGrabResult;
+                        camera.RetrieveResult(60000, ptrGrabResult);
+
+                        if (ptrGrabResult->GrabSucceeded()) {
+                            Image::from(ptrGrabResult).saveImage((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
+                            std::ofstream file((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
+                            init_xml_file(file);
+                            write_xml_entry(file, "Lens-Type", "12mm");
+                            write_xml_entry(file, "Channel", to_string(channel_num).c_str());
+                            write_xml_entry(file, "Raw-Exposure", to_string(camera.ExposureTimeRaw.GetValue()).c_str());
+                            close_xml_file(file);
+                            channel_num = iterate_channel(channel_num);
+
+                            Sleep(500);
+                        }
+                        else
+                        {
+                            cout << "Error: " << ptrGrabResult->GetErrorCode()
+                                << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            PylonTerminate();
+                            exit(1);
+
+                        }
+
+                        cout << "Camera shuttering terminated..." << endl;
+                    }
+
+                    cout << "Capturing channel 2...\n";
+
+                    path = getImagePath(aux);
+
+                    camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
+                    camera.TriggerMode.SetValue(TriggerMode_On);
+                    camera.TriggerSource.SetValue(TriggerSource_Software);
+
+                    camera.StartGrabbing(1);
+                    bytesWritten += send(clientSd, (char*)&msg, strlen(msg), 0);
+
+                    while (camera.IsGrabbing())
+                    {
+                        camera.TriggerSoftware.Execute();
+                        CGrabResultPtr ptrGrabResult;
+                        camera.RetrieveResult(60000, ptrGrabResult);
+
+                        if (ptrGrabResult->GrabSucceeded()) {
+                            Image::from(ptrGrabResult).saveImage((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
+                            std::ofstream file((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
+                            init_xml_file(file);
+                            write_xml_entry(file, "Lens-Type", "12mm");
+                            write_xml_entry(file, "Channel", to_string(channel_num).c_str());
+                            write_xml_entry(file, "Raw-Exposure", to_string(camera.ExposureTimeRaw.GetValue()).c_str());
+                            close_xml_file(file);
+                            channel_num = iterate_channel(channel_num);
+
+                            Sleep(500);
+                        }
+                        else
+                        {
+                            cout << "Error: " << ptrGrabResult->GetErrorCode()
+                                << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            PylonTerminate();
+                            exit(1);
+
+                        }
+
+                        cout << "Camera shuttering terminated..." << endl;
+                    }
+
+                    cout << "Capturing channel 3...\n";
+
+                    path = getImagePath(aux);
+
+                    camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
+                    camera.TriggerMode.SetValue(TriggerMode_On);
+                    camera.TriggerSource.SetValue(TriggerSource_Software);
+
+                    camera.StartGrabbing(1);
+                    bytesWritten += send(clientSd, (char*)&msg, strlen(msg), 0);
+
+                    while (camera.IsGrabbing())
+                    {
+                        camera.TriggerSoftware.Execute();
+                        CGrabResultPtr ptrGrabResult;
+                        camera.RetrieveResult(60000, ptrGrabResult);
+
+                        if (ptrGrabResult->GrabSucceeded()) {
+                            Image::from(ptrGrabResult).saveImage((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
+                            std::ofstream file((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
+                            init_xml_file(file);
+                            write_xml_entry(file, "Lens-Type", "12mm");
+                            write_xml_entry(file, "Channel", to_string(channel_num).c_str());
+                            write_xml_entry(file, "Raw-Exposure", to_string(camera.ExposureTimeRaw.GetValue()).c_str());
+                            close_xml_file(file);
+                            channel_num = iterate_channel(channel_num);
+
+                            Sleep(500);
+                        }
+                        else
+                        {
+                            cout << "Error: " << ptrGrabResult->GetErrorCode()
+                                << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            PylonTerminate();
+                            exit(1);
+
+                        }
+
+                        cout << "Camera shuttering terminated..." << endl;
+                    }
+
+                    cout << "Capturing channel 4...\n";
+
+                    path = getImagePath(aux);
+
+                    camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
+                    camera.TriggerMode.SetValue(TriggerMode_On);
+                    camera.TriggerSource.SetValue(TriggerSource_Software);
+
+                    camera.StartGrabbing(1);
+                    bytesWritten += send(clientSd, (char*)&msg, strlen(msg), 0);
+
+                    while (camera.IsGrabbing())
+                    {
+                        camera.TriggerSoftware.Execute();
+                        CGrabResultPtr ptrGrabResult;
+                        camera.RetrieveResult(60000, ptrGrabResult);
+
+                        if (ptrGrabResult->GrabSucceeded()) {
+                            Image::from(ptrGrabResult).saveImage((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
+                            std::ofstream file((START_TIME + "/" + column + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
+                            init_xml_file(file);
+                            write_xml_entry(file, "Lens-Type", "12mm");
+                            write_xml_entry(file, "Channel", to_string(channel_num).c_str());
+                            write_xml_entry(file, "Raw-Exposure", to_string(camera.ExposureTimeRaw.GetValue()).c_str());
+                            close_xml_file(file);
+                            channel_num = iterate_channel(channel_num);
+
+                            Sleep(500);
+                        }
+                        else
+                        {
+                            cout << "Error: " << ptrGrabResult->GetErrorCode()
+                                << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            PylonTerminate();
+                            exit(1);
+
+                        }
+
+                        cout << "Camera shuttering terminated..." << endl;
+                    }
+                    if (column == 'D') row++;
+                    column = iterate_column(column);
+                    cout << "\nContinue to Row: " << row << ", Column: " << column << ". Press any key.\n" << endl;
+                    cin >> randomInput;
+
+                }
+
             }
 
                 if (commands != 12) {
