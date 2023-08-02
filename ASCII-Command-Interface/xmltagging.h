@@ -36,4 +36,18 @@ void close_xml_file(ofstream& file);
 /// <returns></returns>
 bool delete_xml_entry(ofstream& file, string& entry);
 
+/// <summary>
+/// Controls the flow of channel number when taking photos
+/// </summary>
+/// <param name="channel"></param>
+/// <returns></returns>
+int iterate_channel(int channel);
+
+/// <summary>
+/// Controls the flow of column letter when taking photos
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+char iterate_column(char column);
+
 #endif //XMLTAGGING_H

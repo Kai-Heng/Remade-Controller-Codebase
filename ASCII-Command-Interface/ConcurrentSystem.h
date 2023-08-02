@@ -36,7 +36,7 @@ Image captureImageKeyboard(CBaslerUniversalInstantCamera& camera);
 /// <summary>
 /// Checks to make sure that the "image" directory exists, creates it if it doesn't.
 /// </summary>
-void checkForImageDirectory();
+void checkForImageDirectory(std::string start_time);
 
 /// <summary>
 /// Returns a new instance of a path used in order to capture and save imaages correctly
