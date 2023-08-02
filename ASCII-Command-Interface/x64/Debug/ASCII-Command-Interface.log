@@ -1,3 +1,0 @@
-﻿  ConcurrentSystem.cpp
-C:\Users\cceelab\Desktop\tjfriedl\REMADE\remade-controller-codebase\ASCII-Command-Interface\ConcurrentSystem.cpp(99,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  ASCII-Command-Interface.vcxproj -> C:\Users\cceelab\Desktop\tjfriedl\REMADE\remade-controller-codebase\ASCII-Command-Interface\x64\Debug\ASCII-Command-Interface.exe
