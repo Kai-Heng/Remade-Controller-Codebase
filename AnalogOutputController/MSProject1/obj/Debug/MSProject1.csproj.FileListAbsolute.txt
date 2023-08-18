@@ -22,3 +22,15 @@ C:\Users\cceelab\Desktop\remade-controller-codebase\MSProject1\obj\Debug\MSProje
 C:\Users\cceelab\Desktop\remade-controller-codebase\MSProject1\obj\Debug\MSProject1.csproj.CoreCompileInputs.cache
 C:\Users\cceelab\Desktop\remade-controller-codebase\MSProject1\obj\Debug\MSProject1.exe
 C:\Users\cceelab\Desktop\remade-controller-codebase\MSProject1\obj\Debug\MSProject1.pdb
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\bin\Debug\MSProject1.exe.config
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\bin\Debug\MSProject1.exe
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\bin\Debug\MSProject1.pdb
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.csproj.AssemblyReference.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.exe.config
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\NationalInstruments.Examples.ContGenVoltageWfm_IntClk.Form1.resources
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.Properties.Resources.resources
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.csproj.GenerateResource.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.exe.licenses
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.csproj.CoreCompileInputs.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.exe
+C:\Users\cceelab\Desktop\remade-controller-codebase\AnalogOutputController\MSProject1\obj\Debug\MSProject1.pdb

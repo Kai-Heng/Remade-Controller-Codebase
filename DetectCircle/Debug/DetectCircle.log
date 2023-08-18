@@ -1,0 +1,6 @@
+﻿  DetectShape.cpp
+C:\Users\cceelab\Desktop\remade-controller-codebase\DetectCircle\DetectShape.cpp(38,114): error C2065: 'CV_FILLED': undeclared identifier
+C:\Users\cceelab\Desktop\remade-controller-codebase\DetectCircle\DetectShape.cpp(51,26): error C2065: 'CV_BGR2GRAY': undeclared identifier
+C:\Users\cceelab\Desktop\remade-controller-codebase\DetectCircle\DetectShape.cpp(59,41): error C2065: 'CV_RETR_EXTERNAL': undeclared identifier
+C:\Users\cceelab\Desktop\remade-controller-codebase\DetectCircle\DetectShape.cpp(59,59): error C2065: 'CV_CHAIN_APPROX_SIMPLE': undeclared identifier
+C:\Users\cceelab\Desktop\remade-controller-codebase\DetectCircle\DetectShape.cpp(64,20): warning C4018: '<': signed/unsigned mismatch

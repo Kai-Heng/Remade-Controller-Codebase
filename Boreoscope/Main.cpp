@@ -1,4 +1,5 @@
 #include <pylon/PylonIncludes.h>
+//#include <string>
 #include <OECore.h>
 #ifdef PYLON_WIN_BUILD
 #    include <pylon/PylonGUI.h>
@@ -10,7 +11,8 @@
 #include "ICircleUnwrapper.h"
 #include "IEllipseUnwrapper.h"
 #include <map>
-#include <string>
+#include <vector>
+#include <opencv2/opencv.hpp>
 #include <sstream>
 
 
@@ -29,7 +31,7 @@ const string currentDateTime() {
     return buf;
 }
 
-vector<string> unwrappedImageLoc;
+std::vector<string> unwrappedImageLoc;
 
 
 
@@ -199,296 +201,345 @@ Image layer(Image i1, Image i2) {
 
 }
 
-void unwrapImage(string imagePath) {
-    EllipseUnwrapper eUnw = IEllipseUnwrapper::Create();
+/**
+* 360Lib Suite Unwrap function
+*/
 
-    ImagePtr srcImage = ImageFactory::load(imagePath);
-    ImagePtr outImage;
+//void unwrapImage(string imagePath) {
+//    EllipseUnwrapper eUnw = IEllipseUnwrapper::Create();
+//
+//    ImagePtr srcImage = ImageFactory::load(imagePath);
+//    ImagePtr outImage;
+//
+//    ////Recipe 1
+//    //// First Elipse points
+//    //Point p1 = Point(1345, 843);
+//    //Point p2 = Point(1609, 795);
+//    //Point p3 = Point(1719, 977);
+//    //Point p4 = Point(1577, 1185);
+//    //Point p5 = Point(1325, 1107);
+//    //Point p6 = Point(1289, 977);
+//
+//    //vector<Point> firstElipse;
+//
+//    //firstElipse.push_back(p1);
+//    //firstElipse.push_back(p2);
+//    //firstElipse.push_back(p3);
+//    //firstElipse.push_back(p4);
+//    //firstElipse.push_back(p5);
+//    //firstElipse.push_back(p6);
+//
+//
+//    //// Second Elipse Points
+//    //Point p21 = Point(1007, 477);
+//    //Point p22 = Point(819, 807);
+//    //Point p23 = Point(1087, 1551);
+//    //Point p24 = Point(1593, 1691);
+//    //Point p25 = Point(2143, 1261);
+//    //Point p26 = Point(2203, 931);
+//    //Point p27 = Point(1976, 451);
+//
+//    //vector<Point> secondElipse;
+//
+//    //secondElipse.push_back(p21);
+//    //secondElipse.push_back(p22);
+//    //secondElipse.push_back(p23);
+//    //secondElipse.push_back(p24);
+//    //secondElipse.push_back(p25);
+//    //secondElipse.push_back(p26);
+//    //secondElipse.push_back(p27);
+//
+//    //Circle searchArea = Circle(1495, 982, 144);
+//    
+//    /*
+//    //Recipe 2
+//    // First Elipse points
+//    Point p1 = Point(1295, 1010);
+//    Point p2 = Point(1423, 802);
+//    Point p3 = Point(1563, 780);
+//    Point p4 = Point(1444, 1192);
+//    Point p5 = Point(1692, 1119);
+//    Point p6 = Point(1740, 989);
+//
+//    vector<Point> firstElipse;
+//
+//    firstElipse.push_back(p1);
+//    firstElipse.push_back(p2);
+//    firstElipse.push_back(p3);
+//    firstElipse.push_back(p4);
+//    firstElipse.push_back(p5);
+//    firstElipse.push_back(p6);
+//
+//
+//    // Second Elipse Points
+//    Point p21 = Point(1641, 285);
+//    Point p22 = Point(1113, 417);
+//    Point p23 = Point(840, 741);
+//    Point p24 = Point(1229, 1643);
+//    Point p25 = Point(1913, 1553);
+//    Point p26 = Point(2205, 1073);
+//    Point p27 = Point(2137, 681);
+//
+//    vector<Point> secondElipse;
+//
+//    secondElipse.push_back(p21);
+//    secondElipse.push_back(p22);
+//    secondElipse.push_back(p23);
+//    secondElipse.push_back(p24);
+//    secondElipse.push_back(p25);
+//    secondElipse.push_back(p26);
+//    secondElipse.push_back(p27);
+//
+//    Circle searchArea = Circle(1495, 982, 144);
+//    */
+//
+//    /*
+//    //Recipe 3
+//    // First Elipse points
+//    Point p1 = Point(1563, 781);
+//    Point p2 = Point(1639, 809);
+//    Point p3 = Point(1691, 865);
+//    Point p4 = Point(1733, 981);
+//    Point p5 = Point(1697, 1099);
+//    Point p6 = Point(1477, 1207);
+//    Point p7 = Point(1293, 981);
+//    Point p8 = Point(1341, 867);
+//
+//    vector<Point> firstElipse;
+//
+//    firstElipse.push_back(p1);
+//    firstElipse.push_back(p2);
+//    firstElipse.push_back(p3);
+//    firstElipse.push_back(p4);
+//    firstElipse.push_back(p5);
+//    firstElipse.push_back(p6);
+//    firstElipse.push_back(p7);
+//    firstElipse.push_back(p8);
+//
+//
+//    // Second Elipse Points
+//    Point p21 = Point(2079, 1433);
+//    Point p22 = Point(1163, 1599);
+//    Point p23 = Point(1571, 1701);
+//    Point p24 = Point(817, 920);
+//    Point p25 = Point(1325, 315);
+//    Point p26 = Point(1735, 321);
+//    Point p27 = Point(2137, 627);
+//    Point p28 = Point(2221, 952);
+//
+//    vector<Point> secondElipse;
+//
+//    secondElipse.push_back(p21);
+//    secondElipse.push_back(p22);
+//    secondElipse.push_back(p23);
+//    secondElipse.push_back(p24);
+//    secondElipse.push_back(p25);
+//    secondElipse.push_back(p26);
+//    secondElipse.push_back(p27);
+//    secondElipse.push_back(p28);
+//
+//
+//    Circle searchArea = Circle(1511, 990, 146.12);
+//    */
+//
+//    /*
+//    //Recipe 4
+//    // First Elipse points
+//    Point p1 = Point(1393, 813);
+//    Point p2 = Point(1609, 785);
+//    Point p3 = Point(1729, 941);
+//    Point p4 = Point(1685, 1109);
+//    Point p5 = Point(1593, 1189);
+//    Point p6 = Point(1377, 1149);
+//    Point p7 = Point(1305, 945);
+//    Point p8 = Point(1349, 845);
+//
+//    vector<Point> firstElipse;
+//
+//    firstElipse.push_back(p1);
+//    firstElipse.push_back(p2);
+//    firstElipse.push_back(p3);
+//    firstElipse.push_back(p4);
+//    firstElipse.push_back(p5);
+//    firstElipse.push_back(p6);
+//    firstElipse.push_back(p7);
+//    firstElipse.push_back(p8);
+//
+//
+//    // Second Elipse Points
+//    Point p21 = Point(1029, 481);
+//    Point p22 = Point(1433, 285);
+//    Point p23 = Point(1805, 345);
+//    Point p24 = Point(2113, 597);
+//    Point p25 = Point(2229, 949);
+//    Point p26 = Point(2065, 1433);
+//    Point p27 = Point(1877, 1601);
+//    Point p28 = Point(1317, 1665);
+//    Point p29 = Point(841, 1197);
+//
+//    vector<Point> secondElipse;
+//
+//    secondElipse.push_back(p21);
+//    secondElipse.push_back(p22);
+//    secondElipse.push_back(p23);
+//    secondElipse.push_back(p24);
+//    secondElipse.push_back(p25);
+//    secondElipse.push_back(p26);
+//    secondElipse.push_back(p27);
+//    secondElipse.push_back(p28);
+//    secondElipse.push_back(p29);
+//
+//     Circle searchArea = Circle(1511, 990, 146);
+//
+//    */
+//
+//
+//
+//
+//
+//    //Recipe 5
+//    // First Elipse points
+//    Point p1 = Point(1361, 837);
+//    Point p2 = Point(1465, 781);
+//    Point p3 = Point(1617, 785);
+//    Point p4 = Point(1685, 841);
+//    Point p5 = Point(1737, 961);
+//    Point p6 = Point(1725, 1049);
+//    Point p7 = Point(1661, 1141);
+//    Point p8 = Point(1545, 1197);
+//    Point p9 = Point(1433, 1185);
+//    Point p10 = Point(1337, 1109);
+//    Point p11 = Point(1305, 949);
+//    Point p12 = Point(1337, 853);
+//
+//    vector<Point> firstElipse;
+//
+//    firstElipse.push_back(p1);
+//    firstElipse.push_back(p2);
+//    firstElipse.push_back(p3);
+//    firstElipse.push_back(p4);
+//    firstElipse.push_back(p5);
+//    firstElipse.push_back(p6);
+//    firstElipse.push_back(p7);
+//    firstElipse.push_back(p8);
+//    firstElipse.push_back(p9);
+//    firstElipse.push_back(p10);
+//    firstElipse.push_back(p11);
+//    firstElipse.push_back(p12);
+//
+//
+//    // Second Elipse Points
+//    Point p21 = Point(1029, 477);
+//    Point p22 = Point(1185, 365);
+//    Point p23 = Point(1473, 281);
+//    Point p24 = Point(1729, 313);
+//    Point p25 = Point(1881, 381);
+//    Point p26 = Point(2037, 509);
+//    Point p27 = Point(2161, 697);
+//    Point p28 = Point(2237, 953);
+//    //Point p29 = Point(2161, 1681);
+//    Point p30 = Point(1985, 1497);
+//    Point p31 = Point(1657, 1681);
+//    Point p32 = Point(1293, 1661);
+//    Point p33 = Point(893, 1305);
+//    Point p34 = Point(825, 913);
+//    Point p35 = Point(925, 605);
+//    Point p36 = Point(997, 521);
+//
+//    vector<Point> secondElipse;
+//
+//    secondElipse.push_back(p21);
+//    secondElipse.push_back(p22);
+//    secondElipse.push_back(p23);
+//    secondElipse.push_back(p24);
+//    secondElipse.push_back(p25);
+//    secondElipse.push_back(p26);
+//    secondElipse.push_back(p27);
+//    secondElipse.push_back(p28);
+//    //secondElipse.push_back(p29);
+//    secondElipse.push_back(p30);
+//    secondElipse.push_back(p31);
+//    secondElipse.push_back(p32);
+//    secondElipse.push_back(p33);
+//    secondElipse.push_back(p34);
+//    secondElipse.push_back(p35);
+//    secondElipse.push_back(p36);
+//
+//    Circle searchArea = Circle(1511, 990, 146);
+//
+//    eUnw->SetAngleScanStep(0.8);
+//    eUnw->SetContrastThreshold(30);
+//    eUnw->SetMinScore(0.2);
+//    eUnw->SetLevels(1);
+//    eUnw->SetMaxKeypoints(44);
+//    eUnw->SetUnwrapImgResolution(2200, 500);
+//    eUnw->SetLockEllipses(true);
+//    eUnw->SetFirstTemplate(srcImage, firstElipse);
+//    eUnw->SetSecondTemplate(srcImage, secondElipse);
+//    eUnw->SetSearchingArea(searchArea);
+//
+//
+//    //unwrap
+//    outImage = eUnw->Unwrap(srcImage);
+//    string unwrapLocation = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\unwrap\\" + currentDateTime() + ".bmp";
+//    unwrappedImageLoc.push_back(unwrapLocation);
+//    outImage.get()->writeToFile(unwrapLocation.c_str());
+//}
 
-    ////Recipe 1
-    //// First Elipse points
-    //Point p1 = Point(1345, 843);
-    //Point p2 = Point(1609, 795);
-    //Point p3 = Point(1719, 977);
-    //Point p4 = Point(1577, 1185);
-    //Point p5 = Point(1325, 1107);
-    //Point p6 = Point(1289, 977);
+void openCVUnwrap(string filePath) {
+    cv::Mat circleImage = cv::imread(filePath, cv::IMREAD_COLOR);
 
-    //vector<Point> firstElipse;
+    if (circleImage.empty()) {
+        cerr << "Error: Could not load image." << endl;
+    }
 
-    //firstElipse.push_back(p1);
-    //firstElipse.push_back(p2);
-    //firstElipse.push_back(p3);
-    //firstElipse.push_back(p4);
-    //firstElipse.push_back(p5);
-    //firstElipse.push_back(p6);
+    int width = circleImage.cols - 78;
+    int height = circleImage.rows - 95;
 
+    int stripHeight = height;
+    int stripWidth = width;
 
-    //// Second Elipse Points
-    //Point p21 = Point(1007, 477);
-    //Point p22 = Point(819, 807);
-    //Point p23 = Point(1087, 1551);
-    //Point p24 = Point(1593, 1691);
-    //Point p25 = Point(2143, 1261);
-    //Point p26 = Point(2203, 931);
-    //Point p27 = Point(1976, 451);
+    cv::Mat stripImage = cv::Mat::zeros(stripHeight, stripWidth, CV_8UC3);
 
-    //vector<Point> secondElipse;
+    for (int x = 0; x < stripHeight; x++) {
+        for (int y = 0; y < stripWidth; y++) {
+            double angle = static_cast<double>(y) / stripWidth * 2 * CV_PI;
+            double normalizedX = static_cast<double>(x) / stripHeight;
+            int radius = static_cast<int>((normalizedX - 0.5) * height * 0.8 + height / 2);
 
-    //secondElipse.push_back(p21);
-    //secondElipse.push_back(p22);
-    //secondElipse.push_back(p23);
-    //secondElipse.push_back(p24);
-    //secondElipse.push_back(p25);
-    //secondElipse.push_back(p26);
-    //secondElipse.push_back(p27);
+            int circleY = static_cast<int> (radius * cos(angle) + width / 2);
+            int circleX = static_cast<int> (radius * sin(angle) + height / 2);
 
-    //Circle searchArea = Circle(1495, 982, 144);
+            if (circleY >= 0 && circleY < width && circleX >= 0 && circleX < height) {
+                stripImage.at<cv::Vec3b>(x, y) = circleImage.at<cv::Vec3b>(circleX, circleY);
+            }
+        }
+    }
+
+    cv::Rect roi(0, 0, width, 590);
+    cv::Mat cropped = stripImage(roi);
+
+    //Convert 24 bit depth image to 8 bit depth image
+    cv::Mat gray;
+    cv::cvtColor(cropped, gray, cv::COLOR_BGR2GRAY);
+
+    string unwrappedPath = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\unwrap\\" + currentDateTime() + ".bmp";
+    unwrappedImageLoc.push_back(unwrappedPath);
     
-    /*
-    //Recipe 2
-    // First Elipse points
-    Point p1 = Point(1295, 1010);
-    Point p2 = Point(1423, 802);
-    Point p3 = Point(1563, 780);
-    Point p4 = Point(1444, 1192);
-    Point p5 = Point(1692, 1119);
-    Point p6 = Point(1740, 989);
+    cv::imwrite(unwrappedPath, gray);
 
-    vector<Point> firstElipse;
-
-    firstElipse.push_back(p1);
-    firstElipse.push_back(p2);
-    firstElipse.push_back(p3);
-    firstElipse.push_back(p4);
-    firstElipse.push_back(p5);
-    firstElipse.push_back(p6);
-
-
-    // Second Elipse Points
-    Point p21 = Point(1641, 285);
-    Point p22 = Point(1113, 417);
-    Point p23 = Point(840, 741);
-    Point p24 = Point(1229, 1643);
-    Point p25 = Point(1913, 1553);
-    Point p26 = Point(2205, 1073);
-    Point p27 = Point(2137, 681);
-
-    vector<Point> secondElipse;
-
-    secondElipse.push_back(p21);
-    secondElipse.push_back(p22);
-    secondElipse.push_back(p23);
-    secondElipse.push_back(p24);
-    secondElipse.push_back(p25);
-    secondElipse.push_back(p26);
-    secondElipse.push_back(p27);
-
-    Circle searchArea = Circle(1495, 982, 144);
-    */
-
-    /*
-    //Recipe 3
-    // First Elipse points
-    Point p1 = Point(1563, 781);
-    Point p2 = Point(1639, 809);
-    Point p3 = Point(1691, 865);
-    Point p4 = Point(1733, 981);
-    Point p5 = Point(1697, 1099);
-    Point p6 = Point(1477, 1207);
-    Point p7 = Point(1293, 981);
-    Point p8 = Point(1341, 867);
-
-    vector<Point> firstElipse;
-
-    firstElipse.push_back(p1);
-    firstElipse.push_back(p2);
-    firstElipse.push_back(p3);
-    firstElipse.push_back(p4);
-    firstElipse.push_back(p5);
-    firstElipse.push_back(p6);
-    firstElipse.push_back(p7);
-    firstElipse.push_back(p8);
-
-
-    // Second Elipse Points
-    Point p21 = Point(2079, 1433);
-    Point p22 = Point(1163, 1599);
-    Point p23 = Point(1571, 1701);
-    Point p24 = Point(817, 920);
-    Point p25 = Point(1325, 315);
-    Point p26 = Point(1735, 321);
-    Point p27 = Point(2137, 627);
-    Point p28 = Point(2221, 952);
-
-    vector<Point> secondElipse;
-
-    secondElipse.push_back(p21);
-    secondElipse.push_back(p22);
-    secondElipse.push_back(p23);
-    secondElipse.push_back(p24);
-    secondElipse.push_back(p25);
-    secondElipse.push_back(p26);
-    secondElipse.push_back(p27);
-    secondElipse.push_back(p28);
-
-
-    Circle searchArea = Circle(1511, 990, 146.12);
-    */
-
-    /*
-    //Recipe 4
-    // First Elipse points
-    Point p1 = Point(1393, 813);
-    Point p2 = Point(1609, 785);
-    Point p3 = Point(1729, 941);
-    Point p4 = Point(1685, 1109);
-    Point p5 = Point(1593, 1189);
-    Point p6 = Point(1377, 1149);
-    Point p7 = Point(1305, 945);
-    Point p8 = Point(1349, 845);
-
-    vector<Point> firstElipse;
-
-    firstElipse.push_back(p1);
-    firstElipse.push_back(p2);
-    firstElipse.push_back(p3);
-    firstElipse.push_back(p4);
-    firstElipse.push_back(p5);
-    firstElipse.push_back(p6);
-    firstElipse.push_back(p7);
-    firstElipse.push_back(p8);
-
-
-    // Second Elipse Points
-    Point p21 = Point(1029, 481);
-    Point p22 = Point(1433, 285);
-    Point p23 = Point(1805, 345);
-    Point p24 = Point(2113, 597);
-    Point p25 = Point(2229, 949);
-    Point p26 = Point(2065, 1433);
-    Point p27 = Point(1877, 1601);
-    Point p28 = Point(1317, 1665);
-    Point p29 = Point(841, 1197);
-
-    vector<Point> secondElipse;
-
-    secondElipse.push_back(p21);
-    secondElipse.push_back(p22);
-    secondElipse.push_back(p23);
-    secondElipse.push_back(p24);
-    secondElipse.push_back(p25);
-    secondElipse.push_back(p26);
-    secondElipse.push_back(p27);
-    secondElipse.push_back(p28);
-    secondElipse.push_back(p29);
-
-     Circle searchArea = Circle(1511, 990, 146);
-
-    */
-
-
-
-
-
-    //Recipe 5
-    // First Elipse points
-    Point p1 = Point(1361, 837);
-    Point p2 = Point(1465, 781);
-    Point p3 = Point(1617, 785);
-    Point p4 = Point(1685, 841);
-    Point p5 = Point(1737, 961);
-    Point p6 = Point(1725, 1049);
-    Point p7 = Point(1661, 1141);
-    Point p8 = Point(1545, 1197);
-    Point p9 = Point(1433, 1185);
-    Point p10 = Point(1337, 1109);
-    Point p11 = Point(1305, 949);
-    Point p12 = Point(1337, 853);
-
-    vector<Point> firstElipse;
-
-    firstElipse.push_back(p1);
-    firstElipse.push_back(p2);
-    firstElipse.push_back(p3);
-    firstElipse.push_back(p4);
-    firstElipse.push_back(p5);
-    firstElipse.push_back(p6);
-    firstElipse.push_back(p7);
-    firstElipse.push_back(p8);
-    firstElipse.push_back(p9);
-    firstElipse.push_back(p10);
-    firstElipse.push_back(p11);
-    firstElipse.push_back(p12);
-
-
-    // Second Elipse Points
-    Point p21 = Point(1029, 477);
-    Point p22 = Point(1185, 365);
-    Point p23 = Point(1473, 281);
-    Point p24 = Point(1729, 313);
-    Point p25 = Point(1881, 381);
-    Point p26 = Point(2037, 509);
-    Point p27 = Point(2161, 697);
-    Point p28 = Point(2237, 953);
-    //Point p29 = Point(2161, 1681);
-    Point p30 = Point(1985, 1497);
-    Point p31 = Point(1657, 1681);
-    Point p32 = Point(1293, 1661);
-    Point p33 = Point(893, 1305);
-    Point p34 = Point(825, 913);
-    Point p35 = Point(925, 605);
-    Point p36 = Point(997, 521);
-
-    vector<Point> secondElipse;
-
-    secondElipse.push_back(p21);
-    secondElipse.push_back(p22);
-    secondElipse.push_back(p23);
-    secondElipse.push_back(p24);
-    secondElipse.push_back(p25);
-    secondElipse.push_back(p26);
-    secondElipse.push_back(p27);
-    secondElipse.push_back(p28);
-    //secondElipse.push_back(p29);
-    secondElipse.push_back(p30);
-    secondElipse.push_back(p31);
-    secondElipse.push_back(p32);
-    secondElipse.push_back(p33);
-    secondElipse.push_back(p34);
-    secondElipse.push_back(p35);
-    secondElipse.push_back(p36);
-
-    Circle searchArea = Circle(1511, 990, 146);
-
-    eUnw->SetAngleScanStep(0.8);
-    eUnw->SetContrastThreshold(30);
-    eUnw->SetMinScore(0.2);
-    eUnw->SetLevels(1);
-    eUnw->SetMaxKeypoints(44);
-    eUnw->SetUnwrapImgResolution(2200, 500);
-    eUnw->SetLockEllipses(true);
-    eUnw->SetFirstTemplate(srcImage, firstElipse);
-    eUnw->SetSecondTemplate(srcImage, secondElipse);
-    eUnw->SetSearchingArea(searchArea);
-
-
-    //unwrap
-    outImage = eUnw->Unwrap(srcImage);
-    string unwrapLocation = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\unwrap\\" + currentDateTime() + ".bmp";
-    unwrappedImageLoc.push_back(unwrapLocation);
-    outImage.get()->writeToFile(unwrapLocation.c_str());
+    cv::waitKey(0);
 }
 
-char temp;
+//char temp;
 
 Image capturedImage(CBaslerUniversalInstantCamera& camera) {
     camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
     camera.TriggerMode.SetValue(TriggerMode_On);
     camera.TriggerSource.SetValue(TriggerSource_Software);
 
-    cout << "Press any key on the keyboard to capture | 'q' to quit \n";
-    cin >> temp;
+    //cout << "Press any key on the keyboard to capture | 'q' to quit \n";
+    //cin >> temp;
     camera.StartGrabbing(1);
 
     while (camera.IsGrabbing())
@@ -527,7 +578,7 @@ void captureImage() {
         camera.Close();
 
 
-        unwrapImage(path.c_str());
+        openCVUnwrap(path.c_str());
 
 }
 
@@ -620,7 +671,7 @@ int main(int argc, char* argv[])
                 cout << "Image name: ";
                 cin >> imageName;
                 string fileLoc = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\original\\" + imageName + ".bmp";
-                unwrapImage(fileLoc);
+                openCVUnwrap(fileLoc);
             }
 
             else if (command == 4) {
