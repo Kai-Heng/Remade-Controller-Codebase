@@ -614,15 +614,15 @@ int main(int argc, char* argv[])
             }
             else if (command == 2) {
                 char character;
-                char number;
+                string label;
                 //cout << "Alphabet: ";
                 //cin >> character;
                 cout << "Label: ";
-                cin >> number;
+                cin >> label;
 
                 ostringstream oss;
 
-                oss << "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\composite\\composite" << number << ".bmp";
+                oss << "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\composite\\composite" << label << ".bmp";
                 //string src1 = oss1.str();
                 //string src2 = oss2.str();
                 //string src3 = oss3.str();
@@ -633,8 +633,18 @@ int main(int argc, char* argv[])
                 //char* c3 = (char*) src3.c_str();
 
                 string out = oss.str();
+                if (unwrappedImageLoc.size() == 2) {
+                    string src1 = unwrappedImageLoc.at(1);
+                    string src2 = unwrappedImageLoc.at(0);
 
-                if (unwrappedImageLoc.size() == 3) {
+                    char* c1 = (char*)src1.c_str();
+                    char* c2 = (char*)src2.c_str();
+
+
+                    createCompositeImageFromDisk(1, 2, new char* [] {c1, c2}, out.c_str());
+                }
+
+                else if (unwrappedImageLoc.size() == 3) {
                     string src1 = unwrappedImageLoc.at(2);
                     string src2 = unwrappedImageLoc.at(1);
                     string src3 = unwrappedImageLoc.at(0);
