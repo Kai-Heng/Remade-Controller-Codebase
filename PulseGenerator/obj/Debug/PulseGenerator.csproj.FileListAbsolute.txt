@@ -1,0 +1,12 @@
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\bin\Debug\PulseGenerator.exe.config
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\bin\Debug\PulseGenerator.exe
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\bin\Debug\PulseGenerator.pdb
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.csproj.AssemblyReference.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.exe.config
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.Form1.resources
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.Properties.Resources.resources
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.csproj.GenerateResource.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.exe.licenses
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.csproj.CoreCompileInputs.cache
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.exe
+C:\Users\cceelab\Desktop\remade-controller-codebase\PulseGenerator\obj\Debug\PulseGenerator.pdb

@@ -139,6 +139,7 @@ namespace MSProject1
             return rVal;
         }
 
+
         public static void InitComboBox(System.Windows.Forms.ComboBox box)
         {
             box.Items.Clear();
