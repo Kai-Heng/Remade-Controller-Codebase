@@ -64,11 +64,11 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-- [ ] [Visual Studio 2019]
-- [ ] [Pylon SDKs]
-- [ ] [OpenCV 4.8.0]
-- [ ] [Measurement Studio]
-- [ ] [C++ Library]
+- [ ] [Visual Studio 2019](https://learn.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
+- [ ] [Pylon SDKs](https://www.baslerweb.com/en/downloads/software-downloads/software-pylon-7-3-0-windows/)
+- [ ] [OpenCV 4.8.0](https://opencv.org/releases/)
+- [ ] [Measurement Studio](https://www.ni.com/pdf/manuals/374658c.html?prodref=com-ni-package_manager-23.5)
+- [ ] [C++ Library](https://www.msys2.org/)
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
