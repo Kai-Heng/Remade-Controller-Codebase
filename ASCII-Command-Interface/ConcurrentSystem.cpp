@@ -9,6 +9,8 @@
 
 #include "ConcurrentSystem.h"
 #include "Image.h"
+#include <iostream>
+#include <Windows.h>
 
 namespace fs = std::experimental::filesystem;
 

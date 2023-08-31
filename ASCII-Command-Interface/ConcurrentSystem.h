@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <winhttp.h>
 #include <string>
+#include <ShlObj.h>
 
 #include "Image.h"
 
