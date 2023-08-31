@@ -503,7 +503,7 @@ void openCVUnwrap(string filePath) {
 
     for (int x = 0; x < stripHeight; x++) {
         for (int y = 0; y < stripWidth; y++) {
-            double angle = static_cast<double>(y) / stripWidth * 2 * CV_PI;
+            double angle = static_cast<double>(y) / stripWidth * CV_PI;
             double normalizedX = static_cast<double>(x) / stripHeight;
             int radius = static_cast<int>((normalizedX - 0.5) * height * 0.8 + height / 2);
 
@@ -516,7 +516,7 @@ void openCVUnwrap(string filePath) {
         }
     }
 
-    cv::Rect roi(0, 0, width, 590);
+    cv::Rect roi(0, 0, width, 650);
     cv::Mat cropped = stripImage(roi);
 
     //Convert 24 bit depth image to 8 bit depth image
