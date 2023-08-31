@@ -21,6 +21,7 @@
 #include <conio.h>
 #include <windows.h>
 #include <csignal>
+#include <conio.h>
 
 #include "ConcurrentSystem.h"
 #include "Image.h"
@@ -83,6 +84,7 @@ void signalHandler(int signal) {
 int main(int argc, char* argv[])
 {
     // Register the signal handler for SIGINT -> Terminates process properly.
+    // TODO: This method needs further investigation, not sure if anything is really happening.
     signal(SIGINT, signalHandler);
 
     START_TIME = currentDateTime();
@@ -98,6 +100,7 @@ int main(int argc, char* argv[])
     path += currentDateTime();
     path += ".bmp";
 
+    // Try loop required for handling errors and warnings thrown by the Pylon Camera libraries
     try {
 
         PylonInitialize();
@@ -111,7 +114,7 @@ int main(int argc, char* argv[])
         camera.Height.SetToMaximum();
         camera.ExposureMode.SetValue(ExposureMode_Timed);
         camera.ExposureAuto.SetValue(ExposureAuto_Off);
-        camera.ExposureTimeRaw.SetValue(50000);
+        camera.ExposureTimeRaw.SetValue(10000); // This can be a set reference depending on implementation. Maybe add a config file that handles this?
 
         WSADATA wsaData;
         int iResult;
@@ -124,8 +127,8 @@ int main(int argc, char* argv[])
 
         //create a message buffer 
         char msg[1500];
+
         //setup a socket and connection tools 
-        
         struct hostent* host = gethostbyname(serverIp);
         sockaddr_in sendSockAddr;
         memset((char*)&sendSockAddr, 0, sizeof(sendSockAddr));
@@ -166,7 +169,7 @@ int main(int argc, char* argv[])
             string channel;
             string nnnn;
 
-            if (commands == 1 || commands == 2 || commands == 3) {
+            if (commands < 4) {
                 data = "RUN:SEQUENCE;";
             }
             else {
@@ -206,8 +209,10 @@ int main(int argc, char* argv[])
                     }
                     else
                     {
+                        cout << "\033[31m";
                         cout << "Error: " << ptrGrabResult->GetErrorCode()
                             << " " << ptrGrabResult->GetErrorDescription() << endl;
+                        cout << "\033[0m";
                         PylonTerminate();
                         exit(1);
 
@@ -236,20 +241,22 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
                         std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
                         write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
-                        iterate_channel(channel_num);
+                        channel_num = iterate_channel(channel_num);
 
                         Sleep(500);
                     }
                     else
                     {
+                        cout << "\033[31m";
                         cout << "Error: " << ptrGrabResult->GetErrorCode()
                             << " " << ptrGrabResult->GetErrorDescription() << endl;
+                        cout << "\033[0m";
                         PylonTerminate();
                         exit(1);
 
@@ -276,20 +283,22 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
                         std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
                         write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
-                        iterate_channel(channel_num);
+                        channel_num = iterate_channel(channel_num);
 
                         Sleep(500);
                     }
                     else
                     {
+                        cout << "\033[31m";
                         cout << "Error: " << ptrGrabResult->GetErrorCode()
                             << " " << ptrGrabResult->GetErrorDescription() << endl;
+                        cout << "\033[0m";
                         PylonTerminate();
                         exit(1);
 
@@ -316,20 +325,22 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
                         std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
                         write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
-                        iterate_channel(channel_num);
+                        channel_num = iterate_channel(channel_num);
 
                         Sleep(500);
                     }
                     else
                     {
+                        cout << "\033[31m";
                         cout << "Error: " << ptrGrabResult->GetErrorCode()
                             << " " << ptrGrabResult->GetErrorDescription() << endl;
+                        cout << "\033[0m";
                         PylonTerminate();
                         exit(1);
 
@@ -356,20 +367,22 @@ int main(int argc, char* argv[])
                     camera.RetrieveResult(60000, ptrGrabResult);
 
                     if (ptrGrabResult->GrabSucceeded()) {
-                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str()).c_str(), ImageFileFormat_Bmp);
+                        Image::from(ptrGrabResult).saveImage((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".bmp").c_str(), ImageFileFormat_Bmp);
                         std::ofstream file((START_TIME + "/" + to_string(column).c_str() + to_string(row).c_str() + "_Q" + to_string(channel_num).c_str() + ".xml").c_str());
                         init_xml_file(file);
                         write_xml_entry(file, "Lens-Type", "12mm");
                         write_xml_entry(file, "Channel", to_string(channel_num).c_str());
                         close_xml_file(file);
-                        iterate_channel(channel_num);
+                        channel_num = iterate_channel(channel_num);
 
                         Sleep(500);
                     }
                     else
                     {
+                        cout << "\033[31m";
                         cout << "Error: " << ptrGrabResult->GetErrorCode()
                             << " " << ptrGrabResult->GetErrorDescription() << endl;
+                        cout << "\033[0m";
                         PylonTerminate();
                         exit(1);
 
@@ -380,7 +393,7 @@ int main(int argc, char* argv[])
             }
             else if (commands == 3) {
 
-                while (row != 18) {
+                while (row != 19) {
 
                     cout << "Capturing channel 1...\n";
 
@@ -413,8 +426,10 @@ int main(int argc, char* argv[])
                         }
                         else
                         {
+                            cout << "\033[31m";
                             cout << "Error: " << ptrGrabResult->GetErrorCode()
                                 << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            cout << "\033[0m";
                             PylonTerminate();
                             exit(1);
 
@@ -454,8 +469,10 @@ int main(int argc, char* argv[])
                         }
                         else
                         {
+                            cout << "\033[31m";
                             cout << "Error: " << ptrGrabResult->GetErrorCode()
                                 << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            cout << "\033[0m";
                             PylonTerminate();
                             exit(1);
 
@@ -495,8 +512,10 @@ int main(int argc, char* argv[])
                         }
                         else
                         {
+                            cout << "\033[31m";
                             cout << "Error: " << ptrGrabResult->GetErrorCode()
                                 << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            cout << "\033[0m";
                             PylonTerminate();
                             exit(1);
 
@@ -536,8 +555,10 @@ int main(int argc, char* argv[])
                         }
                         else
                         {
+                            cout << "\033[31m";
                             cout << "Error: " << ptrGrabResult->GetErrorCode()
                                 << " " << ptrGrabResult->GetErrorDescription() << endl;
+                            cout << "\033[0m";
                             PylonTerminate();
                             exit(1);
 
@@ -547,14 +568,17 @@ int main(int argc, char* argv[])
                     }
                     if (column == 'D') row++;
                     column = iterate_column(column);
-                    cout << "\nContinue to Row: " << row << ", Column: " << column << ". Press any key.\n" << endl;
+                    cout << "\nContinue to Row: " << row << ", Column: " << column << ". Press any key (q to quit).\n" << endl;
                     cin >> randomInput;
+                    if (randomInput == "q") {
+                        row = 19;
+                    }
 
                 }
 
             }
 
-                if (commands != 12) {
+                if (commands != 9) {
                     cout << "Awaiting server response..." << endl;
                     memset(&msg, 0, sizeof(msg));//clear the buffer
                     bytesRead += recv(clientSd, (char*)&msg, sizeof(msg), 0);
@@ -567,23 +591,16 @@ int main(int argc, char* argv[])
                 }
            }
 
-        gettimeofday(&end1, NULL);
-        closesocket(clientSd);
-        cout << "********Session********" << endl;
-        cout << "Bytes written: " << bytesWritten <<
-        " Bytes read: " << bytesRead << endl;
-        cout << "Elapsed time: " << (end1.tv_sec - start1.tv_sec)
-            << " secs" << endl;
-        cout << "Connection closed" << endl;
-
         }
         catch (GenICam::GenericException& e)
             {
+                cout << "\033[31m";
                 cerr << "An exception occurred." << endl << e.GetDescription() << endl << e.GetSourceFileName()
                     << ":" << e.GetSourceLine() << endl;
                 cout << "Press any button to exit" << endl << "Input: ";
                 string s;
                 cin >> s;
+                cout << "\033[0m";
                 exit(1);
             }
 
