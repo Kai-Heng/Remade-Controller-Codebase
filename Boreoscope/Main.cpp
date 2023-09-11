@@ -568,7 +568,7 @@ void captureImage() {
         camera.ExposureMode.SetValue(ExposureMode_Timed);
         camera.ExposureAuto.SetValue(ExposureAuto_Off);
         /*camera.ExposureTimeRaw.SetValue(699000);*/
-        camera.ExposureTimeRaw.SetValue(229000);
+        camera.ExposureTimeRaw.SetValue(409000);
         camera.GainRaw.SetValue(20);
         //camera.BlackLevelRaw.SetValue(504);
 
@@ -686,6 +686,11 @@ int main(int argc, char* argv[])
 
             else if (command == 4) {
                 unwrappedImageLoc.clear();
+            }
+
+            else if (command == 5) {
+                PylonTerminate(true);
+                break;
             }
         }
     }
