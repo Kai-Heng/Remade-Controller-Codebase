@@ -151,7 +151,7 @@ void testCobot(const size_t numImagesX, const size_t numImagesY, const char* con
     //camera.ExposureTimeRaw.SetValue(150375);
     //camera.ExposureTimeRaw.SetValue(7500);
     //camera.ExposureTimeRaw.SetValue(2500);
-    camera.ExposureTimeRaw.SetValue(350000);
+    camera.ExposureTimeRaw.SetValue(550000);
 
     const size_t totalNumImages = numImagesX * numImagesY;
     IImageCollector* imageCollector = new CobotImageCollector(camera, totalNumImages);
