@@ -568,8 +568,8 @@ void captureImage() {
         camera.ExposureMode.SetValue(ExposureMode_Timed);
         camera.ExposureAuto.SetValue(ExposureAuto_Off);
         /*camera.ExposureTimeRaw.SetValue(699000);*/
-        camera.ExposureTimeRaw.SetValue(409000);
-        camera.GainRaw.SetValue(20);
+        camera.ExposureTimeRaw.SetValue(700000);
+        camera.GainRaw.SetValue(50);
         //camera.BlackLevelRaw.SetValue(504);
 
         string path = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\original\\" + currentDateTime() + ".bmp";
