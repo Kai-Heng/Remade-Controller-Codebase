@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Threads</folder>
+	<filename>broken thread at bottom.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Threads\broken thread at bottom.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>broken thread</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2110</xmin>
+			<ymin>1564</ymin>
+			<xmax>3010</xmax>
+			<ymax>1706</ymax>
+		</bndbox>
+	</object>
+</annotation>
