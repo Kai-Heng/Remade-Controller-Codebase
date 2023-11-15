@@ -1,0 +1,38 @@
+<annotation>
+	<folder>head 8</folder>
+	<filename>compositeDamageT1.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 8\compositeDamageT1.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>48</xmin>
+			<ymin>1338</ymin>
+			<xmax>2968</xmax>
+			<ymax>1815</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>35</xmin>
+			<ymin>809</ymin>
+			<xmax>2952</xmax>
+			<ymax>1299</ymax>
+		</bndbox>
+	</object>
+</annotation>

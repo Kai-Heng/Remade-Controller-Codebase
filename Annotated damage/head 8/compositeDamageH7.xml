@@ -1,0 +1,74 @@
+<annotation>
+	<folder>head 8</folder>
+	<filename>compositeDamageH7.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 8\compositeDamageH7.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>16</xmin>
+			<ymin>670</ymin>
+			<xmax>2997</xmax>
+			<ymax>1222</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>42</xmin>
+			<ymin>1315</ymin>
+			<xmax>2987</xmax>
+			<ymax>1922</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>inconsistent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2090</xmin>
+			<ymin>1302</ymin>
+			<xmax>2926</xmax>
+			<ymax>1583</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>inconsistent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>458</xmin>
+			<ymin>1360</ymin>
+			<xmax>1871</xmax>
+			<ymax>1599</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>26</xmin>
+			<ymin>254</ymin>
+			<xmax>2990</xmax>
+			<ymax>664</ymax>
+		</bndbox>
+	</object>
+</annotation>

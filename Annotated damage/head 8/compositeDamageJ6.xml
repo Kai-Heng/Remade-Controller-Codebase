@@ -1,0 +1,74 @@
+<annotation>
+	<folder>head 8</folder>
+	<filename>compositeDamageJ6.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 8\compositeDamageJ6.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>2600</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>corrosion zone</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2503</xmin>
+			<ymin>1318</ymin>
+			<xmax>3010</xmax>
+			<ymax>1966</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosion zone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>6</xmin>
+			<ymin>1514</ymin>
+			<xmax>252</xmax>
+			<ymax>1943</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosion zone</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2493</xmin>
+			<ymin>685</ymin>
+			<xmax>3010</xmax>
+			<ymax>1305</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>chipped zone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1732</xmin>
+			<ymin>630</ymin>
+			<xmax>2006</xmax>
+			<ymax>1018</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>chipped zone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1081</xmin>
+			<ymin>689</ymin>
+			<xmax>1684</xmax>
+			<ymax>905</ymax>
+		</bndbox>
+	</object>
+</annotation>
