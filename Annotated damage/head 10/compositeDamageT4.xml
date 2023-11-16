@@ -1,0 +1,50 @@
+<annotation>
+	<folder>head 10</folder>
+	<filename>compositeDamageT4.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 10\compositeDamageT4.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>45</xmin>
+			<ymin>1341</ymin>
+			<xmax>3006</xmax>
+			<ymax>1915</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>48</xmin>
+			<ymin>686</ymin>
+			<xmax>2984</xmax>
+			<ymax>1331</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>61</xmin>
+			<ymin>418</ymin>
+			<xmax>2977</xmax>
+			<ymax>699</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>head 9</folder>
+	<filename>compositeDamageJ2.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 9\compositeDamageJ2.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>16</xmin>
+			<ymin>1335</ymin>
+			<xmax>3010</xmax>
+			<ymax>1935</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>32</xmin>
+			<ymin>686</ymin>
+			<xmax>2990</xmax>
+			<ymax>1286</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>45</xmin>
+			<ymin>12</ymin>
+			<xmax>3006</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+</annotation>

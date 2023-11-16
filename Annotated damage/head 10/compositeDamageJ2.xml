@@ -1,0 +1,62 @@
+<annotation>
+	<folder>head 10</folder>
+	<filename>compositeDamageJ2.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 10\compositeDamageJ2.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>2600</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>13</xmin>
+			<ymin>1982</ymin>
+			<xmax>3000</xmax>
+			<ymax>2600</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>16</xmin>
+			<ymin>1305</ymin>
+			<xmax>2987</xmax>
+			<ymax>1966</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3</xmin>
+			<ymin>789</ymin>
+			<xmax>2977</xmax>
+			<ymax>1334</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>extensive chipped</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>16</xmin>
+			<ymin>630</ymin>
+			<xmax>2977</xmax>
+			<ymax>876</ymax>
+		</bndbox>
+	</object>
+</annotation>
