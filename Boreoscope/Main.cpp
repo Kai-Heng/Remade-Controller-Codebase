@@ -1,6 +1,5 @@
 #include <pylon/PylonIncludes.h>
 //#include <string>
-#include <OECore.h>
 #ifdef PYLON_WIN_BUILD
 #    include <pylon/PylonGUI.h>
 #endif
@@ -8,8 +7,6 @@
 #include "Image.h"
 #include "ImageCollector.h"
 #include "ImagePipeline.h"
-#include "ICircleUnwrapper.h"
-#include "IEllipseUnwrapper.h"
 #include <map>
 #include <vector>
 #include <opencv2/opencv.hpp>
@@ -19,7 +16,6 @@
 using namespace Pylon;
 using namespace std;
 using namespace Basler_UniversalCameraParams;
-using namespace OELib;
 
 const string currentDateTime() {
     time_t      now = time(0);

@@ -73,8 +73,8 @@
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Program Files\Tielogic\360Lib Suite\lib;C:\opencv\build\x64\vc16\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(PYLON_DEV_DIR)\include;C:\opencv\build\include;C:\Program Files\Tielogic\360Lib Suite\include</IncludePath>
-    <LibraryPath>C:\opencv\build\x64\vc16\lib;C:\Program Files\Tielogic\360Lib Suite\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(PYLON_DEV_DIR)\include;C:\opencv\build\include</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -137,12 +137,12 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
-      <AdditionalLibraryDirectories>$(PYLON_DEV_DIR)\lib\x64;C:\opencv\build\x64\vc16\lib;C:\Program Files\Tielogic\360Lib Suite\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world480.lib;opencv_world480d.lib;Lib360.lib;OECore.lib;OECore_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PYLON_DEV_DIR)\lib\x64;C:\opencv\build\x64\vc16\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world480.lib;opencv_world480d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
       <DisableSpecificWarnings>26812</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>C:\opencv\sources\include;C:\Program Files\Tielogic\360Lib Suite\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\opencv\sources\include;</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
