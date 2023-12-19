@@ -689,6 +689,9 @@ int main(int argc, char* argv[])
                 PylonTerminate(true);
                 break;
             }
+            else {
+                continue;
+            }
         }
     }
 
