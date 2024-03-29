@@ -1,0 +1,50 @@
+<annotation>
+	<folder>head 2022101311048</folder>
+	<filename>compositeDamagedA10.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2022101311048\compositeDamagedA10.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fızzy</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>64</xmin>
+			<ymin>1024</ymin>
+			<xmax>800</xmax>
+			<ymax>1128</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fızzy</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>760</ymin>
+			<xmax>2252</xmax>
+			<ymax>1024</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fızzy</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>730</xmin>
+			<ymin>1357</ymin>
+			<xmax>2001</xmax>
+			<ymax>1551</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,38 @@
+<annotation>
+	<folder>head 14</folder>
+	<filename>compositeDamageJ5.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 14\compositeDamageJ5.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1300</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>22</xmin>
+			<ymin>644</ymin>
+			<xmax>2971</xmax>
+			<ymax>1300</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosion</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>377</ymin>
+			<xmax>2974</xmax>
+			<ymax>677</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>head 2022092911037</folder>
+	<filename>compositeDamagedJ10.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2022092911037\compositeDamagedJ10.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>corrosıon</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>84</xmin>
+			<ymin>1311</ymin>
+			<xmax>2981</xmax>
+			<ymax>1908</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosıon and ınconsıstent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2029</xmin>
+			<ymin>756</ymin>
+			<xmax>2877</xmax>
+			<ymax>963</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosıon</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1542</xmin>
+			<ymin>180</ymin>
+			<xmax>2497</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+</annotation>

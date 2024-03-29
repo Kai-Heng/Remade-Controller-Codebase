@@ -482,15 +482,27 @@ Image layer(Image i1, Image i2) {
 //    outImage.get()->writeToFile(unwrapLocation.c_str());
 //}
 
+cv::Mat translateImg(cv::Mat& img, int offsetx, int offsety) {
+    cv::Mat trans_mat = (cv::Mat_<double>(2, 3) << 1, 0, offsetx, 0, 1, offsety);
+    cv::warpAffine(img, img, trans_mat, img.size());
+    return img;
+}
+
+/**
+* @author Kai Heng Gan
+*
+* Unwrap a circular image to strip image with OpenCV
+*/
 void openCVUnwrap(string filePath) {
     cv::Mat circleImage = cv::imread(filePath, cv::IMREAD_COLOR);
-
+    
     if (circleImage.empty()) {
         cerr << "Error: Could not load image." << endl;
     }
 
-    int width = circleImage.cols - 78;
-    int height = circleImage.rows - 95;
+    int width = circleImage.cols-160;
+    int height = circleImage.rows - 150;
+
 
     int stripHeight = height;
     int stripWidth = width;
@@ -499,7 +511,7 @@ void openCVUnwrap(string filePath) {
 
     for (int x = 0; x < stripHeight; x++) {
         for (int y = 0; y < stripWidth; y++) {
-            double angle = static_cast<double>(y) / stripWidth * CV_PI;
+            double angle = static_cast<double>(y) / stripWidth * 2 * CV_PI;
             double normalizedX = static_cast<double>(x) / stripHeight;
             int radius = static_cast<int>((normalizedX - 0.5) * height * 0.8 + height / 2);
 
@@ -512,7 +524,7 @@ void openCVUnwrap(string filePath) {
         }
     }
 
-    cv::Rect roi(0, 0, width, 650);
+    cv::Rect roi(0, 0, width, 700);
     cv::Mat cropped = stripImage(roi);
 
     //Convert 24 bit depth image to 8 bit depth image
@@ -522,7 +534,7 @@ void openCVUnwrap(string filePath) {
     string unwrappedPath = "C:\\Users\\cceelab\\Desktop\\remade-controller-codebase\\unwrap\\" + currentDateTime() + ".bmp";
     unwrappedImageLoc.push_back(unwrappedPath);
     
-    cv::imwrite(unwrappedPath, gray);
+    cv::imwrite(unwrappedPath, cropped);
 
     cv::waitKey(0);
 }

@@ -1,0 +1,38 @@
+<annotation>
+	<folder>head 2022092911037</folder>
+	<filename>compositeDamagedH5.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2022092911037\compositeDamagedH5.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>2600</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>corrosıon</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>70</xmin>
+			<ymin>1951</ymin>
+			<xmax>3010</xmax>
+			<ymax>2562</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosıon and ınconsıstent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3</xmin>
+			<ymin>1279</ymin>
+			<xmax>2995</xmax>
+			<ymax>1904</ymax>
+		</bndbox>
+	</object>
+</annotation>

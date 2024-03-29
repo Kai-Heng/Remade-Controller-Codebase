@@ -1,0 +1,50 @@
+<annotation>
+	<folder>head 2022092911037</folder>
+	<filename>compositeDamagedH6.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2022092911037\compositeDamagedH6.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>445</xmin>
+			<ymin>723</ymin>
+			<xmax>1671</xmax>
+			<ymax>818</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosıon</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>29</xmin>
+			<ymin>337</ymin>
+			<xmax>1542</xmax>
+			<ymax>421</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>corrosıon</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>126</xmin>
+			<ymin>182</ymin>
+			<xmax>1484</xmax>
+			<ymax>298</ymax>
+		</bndbox>
+	</object>
+</annotation>

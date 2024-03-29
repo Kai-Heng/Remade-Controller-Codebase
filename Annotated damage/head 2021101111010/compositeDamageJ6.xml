@@ -1,0 +1,26 @@
+<annotation>
+	<folder>head 2021101111010</folder>
+	<filename>compositeDamageJ6.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2021101111010\compositeDamageJ6.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>2600</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>corrosıon and dırty</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>1314</ymin>
+			<xmax>3010</xmax>
+			<ymax>2511</ymax>
+		</bndbox>
+	</object>
+</annotation>

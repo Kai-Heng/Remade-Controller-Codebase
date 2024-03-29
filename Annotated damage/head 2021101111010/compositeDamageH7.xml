@@ -1,0 +1,26 @@
+<annotation>
+	<folder>head 2021101111010</folder>
+	<filename>compositeDamageH7.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2021101111010\compositeDamageH7.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ınconsıstent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1261</xmin>
+			<ymin>673</ymin>
+			<xmax>1797</xmax>
+			<ymax>802</ymax>
+		</bndbox>
+	</object>
+</annotation>

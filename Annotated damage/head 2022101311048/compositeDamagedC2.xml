@@ -1,0 +1,38 @@
+<annotation>
+	<folder>head 2022101311048</folder>
+	<filename>compositeDamagedC2.bmp</filename>
+	<path>C:\Users\cceelab\Desktop\remade-controller-codebase\Annotated damage\head 2022101311048\compositeDamagedC2.bmp</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3010</width>
+		<height>1950</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dent</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>1263</ymin>
+			<xmax>881</xmax>
+			<ymax>1534</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>dent</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1248</xmin>
+			<ymin>1311</ymin>
+			<xmax>1906</xmax>
+			<ymax>1628</ymax>
+		</bndbox>
+	</object>
+</annotation>
