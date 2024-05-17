@@ -46,7 +46,11 @@ int iterate_channel(int channel) {
 }
 
 char iterate_column(char column) {
-	if (column < 'D') column++;
+	if (column < 'B') column++;
 	else column = 'A';
 	return column;
+}
+
+void update_config_file(ofstream& file) {
+
 }

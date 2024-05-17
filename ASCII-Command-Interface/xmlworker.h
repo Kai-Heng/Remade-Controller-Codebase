@@ -50,4 +50,9 @@ int iterate_channel(int channel);
 /// <returns></returns>
 char iterate_column(char column);
 
+/// <summary>
+/// This function is called whenever the executable is ran within a new package that cannot identify a default xml file.
+/// </summary>
+void update_config_file(ofstream& file);
+
 #endif //XMLTAGGING_H

@@ -21,7 +21,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xmltagging.cpp">
+    <ClCompile Include="xmlworker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConcurrentSystem.cpp">
@@ -38,7 +38,7 @@
     <ClInclude Include="Image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xmltagging.h">
+    <ClInclude Include="xmlworker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
