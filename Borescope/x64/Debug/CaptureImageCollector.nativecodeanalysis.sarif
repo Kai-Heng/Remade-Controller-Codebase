@@ -1,0 +1,1307 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/cceelab/desktop/kaiheng9/boreoscope/captureimagecollector.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "df90d35eac59da841cc7b3a36fd64734ab18372c059e9a0d64100f5f1e2c6148"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cceelab/desktop/kaiheng9/boreoscope/imagecollector.h"
+          },
+          "hashes": {
+            "sha-256": "c5dfc7d7396a640900d91c2f3047a919b929e1e9b0d6cdb1371d1a5ee4a0776f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonincludes.h"
+          },
+          "hashes": {
+            "sha-256": "2151ae1cc9c0871481af91a7cfc02e2141eff406f738f335ba93a4b6cea9489d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/platform.h"
+          },
+          "hashes": {
+            "sha-256": "16ab6856b22902ef442d21eca3086a4d25ef8a2a3d83e70abf5b46cb83166cd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonlinkage.h"
+          },
+          "hashes": {
+            "sha-256": "1817d2df6ed89fd6904e8936cf0a11ec5a005b0ee5f51461b5a8c69ce5acc5a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genicamversion.h"
+          },
+          "hashes": {
+            "sha-256": "6ff98141d58ee85883e7503698db364e6bcb0fae77917a3f9a7d549e15716ef3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/_genicamversion.h"
+          },
+          "hashes": {
+            "sha-256": "9ce149b442714dce274884ee4177b7eed3ac1ed3a8d49438d095135968928393"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gclinkage.h"
+          },
+          "hashes": {
+            "sha-256": "c08be834ace14e9f792265c5b63fa621e64b20a0585879302ee620f1db3d6798"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gctypes.h"
+          },
+          "hashes": {
+            "sha-256": "166a5e13db43475fac4e5b2e67a121480613e8bee67ff2fce90cc20ed0cbb380"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcnamespace.h"
+          },
+          "hashes": {
+            "sha-256": "abaaac50f46d3e06ad4fadb6ed6f4f6703548b665b6c48239588a77aeebf5e2d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcstring.h"
+          },
+          "hashes": {
+            "sha-256": "14d77c9378b0454dd85ef3f6f48f3aff69e52ae5cce9ff5a08539e23fc1609e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcstringvector.h"
+          },
+          "hashes": {
+            "sha-256": "393a0c68e3e0b75c1dfb8d85f9f7d4d1fbcd4fb52783aa5621a3e7214dd55297"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/genapi.h"
+          },
+          "hashes": {
+            "sha-256": "8a923208cd4e206214a72f39b5a6f0ee0a66efb3e87ae46d26e819077b799fc8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcbase.h"
+          },
+          "hashes": {
+            "sha-256": "0c9b8a3661a317023eeb7fa61b126794e15ebc9d8cca30a4da50464758cbde9e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcarray.h"
+          },
+          "hashes": {
+            "sha-256": "73ef686e7ba15f267bcd10f21278eccc249d7aeb1c54dd2ef569b7ce66197790"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcexception.h"
+          },
+          "hashes": {
+            "sha-256": "1c0f04d42b9479f577d5f8db586a00efc041eea902da5a50a6aaf0ac8c262595"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/base/gcutilities.h"
+          },
+          "hashes": {
+            "sha-256": "493e07fcdaa6c4bcd1ff2cb50c4d1709087439c35907d5de40980e19c24d3715"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/genapidll.h"
+          },
+          "hashes": {
+            "sha-256": "44c09a213dcbfb2ee5a5c5294792d5105067047d37a5de12e3738a9dd1a43058"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/genapinamespace.h"
+          },
+          "hashes": {
+            "sha-256": "9236046427fbb3af07a7e1c37061e1d91682f409c0528858cbce3da238dccf88"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/pointer.h"
+          },
+          "hashes": {
+            "sha-256": "d8bfaab798f86e00af998b4ac1c1b0fcc396e396e23634c0f834aa0c109758a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genicamfwd.h"
+          },
+          "hashes": {
+            "sha-256": "cd6cef17c048b4e815a3af41d9492cbf1849c16e7267e67e588799cfb4dcfc9e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ienumeration.h"
+          },
+          "hashes": {
+            "sha-256": "fc9eddbaa4e0d46bc8d454b4a99a3b709fbce7844f797ac7694b6be497a1eb53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ienumentry.h"
+          },
+          "hashes": {
+            "sha-256": "ab6d3a0e65287d2db4549e60c49c4ab2ede42e639aeefc366c771bb73544ccb9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ivalue.h"
+          },
+          "hashes": {
+            "sha-256": "aa0463daafa925f95016b5ac8d0c60f439c9e47fd22179b4c712506d2a79f0c5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/types.h"
+          },
+          "hashes": {
+            "sha-256": "53780ca398d542c0914d86578b7e9334abc3a3aa3a6b34cb8611aec69ffbcf84"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/autovector.h"
+          },
+          "hashes": {
+            "sha-256": "eebf27613a3e258c3b9cc938c55a3b642a9e27600437e45ad508944d4edcb24c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ibase.h"
+          },
+          "hashes": {
+            "sha-256": "a47e62119f9887449de32b12a31763792f2486cd39c74442006c354606296280"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/reference.h"
+          },
+          "hashes": {
+            "sha-256": "55c83053f0ee454c363afa4c926b2568f22b008e69e8d7b1e08c720050c4b8cb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/inode.h"
+          },
+          "hashes": {
+            "sha-256": "c4cf7b0805648f855b1a843b909917d534d3fc77fb4505ffbe49713cb95c7c45"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/container.h"
+          },
+          "hashes": {
+            "sha-256": "47c91ee62141ca1f520d6a1ada3a329f9576ad2427401241739ee2f471e93f66"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ifloat.h"
+          },
+          "hashes": {
+            "sha-256": "18df3c7c1e25e1ec02fe05c6b672b657e6b545a02db6fea7785ed32ac7c85974"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iinteger.h"
+          },
+          "hashes": {
+            "sha-256": "41a0083a6352a36982b6835eaeaa88321d0296f9e86b4f59b9129a1b4620c521"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/icategory.h"
+          },
+          "hashes": {
+            "sha-256": "53e8cdd1d7c013d17231481fcf75d36bad720dbcfccaf50b3acc617824efaa58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iregister.h"
+          },
+          "hashes": {
+            "sha-256": "71dc5cbc12a3c34e0904c67f7f51a8bae47ffeb4a6cae4b8ec7c7a85e4b5d5e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iboolean.h"
+          },
+          "hashes": {
+            "sha-256": "171232f2cb1f4dfb0d6338371142e8633dfb349aec802a63b784dc3a13988473"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iport.h"
+          },
+          "hashes": {
+            "sha-256": "d3231f1de4a2fb17b53c1c1762efd7fa778abe86f2efa93f0a9a90419abbaaa5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iportrecorder.h"
+          },
+          "hashes": {
+            "sha-256": "fb2a8f61c0decc3c7f3c1cbf321ee99b28201f84031115c27c2a338328131452"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iportconstruct.h"
+          },
+          "hashes": {
+            "sha-256": "68420c663b76ec36e41f7c963adfc2cecb7469abc273c03cb08545bb8d4b8f42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ichunkport.h"
+          },
+          "hashes": {
+            "sha-256": "5171ec7746010a098975df077780782e32e2025aac3fdfc2285ab016e9bf8463"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/istring.h"
+          },
+          "hashes": {
+            "sha-256": "5c62c16279b8a0c4dac1cff6cd0dfa2079512a4032e4babd677dd6bf3501559e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/inodemap.h"
+          },
+          "hashes": {
+            "sha-256": "283568bcb710fd039eb6434261d8b1fd765d0375bc678ed04f65a498cf08f7c6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/synch.h"
+          },
+          "hashes": {
+            "sha-256": "6a4338509e5c5f3de8d23196ccb8cd2f39f9fe16cf26d3f9d183735c7628d7e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/idestroy.h"
+          },
+          "hashes": {
+            "sha-256": "7cc2277a5c3b2c5cc0fbdcd428754e2a827cf536ef6121ff3c79f446d8d02bde"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ideviceinfo.h"
+          },
+          "hashes": {
+            "sha-256": "683264bd84f01288e2cb56909ebad6e239703245d6aadf31f06527ec0971521d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iselector.h"
+          },
+          "hashes": {
+            "sha-256": "3ea371f6cd12e97aa3705704cc44a874cd2bbbf4f503ff4050c2ed39cd883bf2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/icommand.h"
+          },
+          "hashes": {
+            "sha-256": "223a3aa66df9fb0409ca6f891fd469f267cfa6651439b3f9ae6c47a3df87c53f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iuserdata.h"
+          },
+          "hashes": {
+            "sha-256": "0b5bac276884ebb9a5aedf500d582cd678ef2208f172f68f0f08ec4b2f3cb0a8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/nodemapref.h"
+          },
+          "hashes": {
+            "sha-256": "aeabda0784392284be052362d016c261d553496dc001be5dc7d1bef863542bcf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/nodemapfactory.h"
+          },
+          "hashes": {
+            "sha-256": "07aafec0081d9e5514073027c86e61651c68b32273ac76b8877b6ae622368e64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/genapiversion.h"
+          },
+          "hashes": {
+            "sha-256": "e39f3a8d2f7af3e6e88d4ff35766de69309e98f4948056efd38d2895e99ba6f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/nodecallback.h"
+          },
+          "hashes": {
+            "sha-256": "c78f1f8829693c44ce0bf50ffcb8b34aa71a9dc09c263937cb8017cedf79c7fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/persistence.h"
+          },
+          "hashes": {
+            "sha-256": "02d6498406ee669b039ea1fbb71150355a01b72f6f8a8246fce340aa702aebcb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/structport.h"
+          },
+          "hashes": {
+            "sha-256": "77529a8baadfa3e0a1a810be340ce8da344c21d8c8a91854addf14360b1de923"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/portimpl.h"
+          },
+          "hashes": {
+            "sha-256": "fa70b8e355c718f52f7ab41180b6c334fef4b50e9bb5bb7ee98e267461968662"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/selectorset.h"
+          },
+          "hashes": {
+            "sha-256": "fd6a0b75748689f8bfa65442f8bff8409aa0440fb2d825d87f69cf88d39d5398"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/iselectordigit.h"
+          },
+          "hashes": {
+            "sha-256": "f25a0a1d69997d1bf0022d1284924c3acec02f181f736b066880a7798f32a4d2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/genapilinkage.h"
+          },
+          "hashes": {
+            "sha-256": "cbad3392495f7c0466fa432d96b31963ae444ab5cdc59a2d8bb9829a7309a10b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/stdinclude.h"
+          },
+          "hashes": {
+            "sha-256": "efaf516ff81fd705e0c4ec21a64f0d9acea484c135ea055a95b2972ce9762f9d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/typemappings.h"
+          },
+          "hashes": {
+            "sha-256": "9eacf8f591632c83f83072ce44b208c394af7614cb19ece64c864ad16081caf3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonbase.h"
+          },
+          "hashes": {
+            "sha-256": "97e4cfb5df6d1a7f719b00322f00eede8b1dac60cfd3c4f99a3c1955bfbda47d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonversioninfo.h"
+          },
+          "hashes": {
+            "sha-256": "7a2b808146feec6ffb31dd6726fea097d9c7db6571b3cb78ef8e2a708a3e9b4c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/info.h"
+          },
+          "hashes": {
+            "sha-256": "4ecd81db78433cd5256cff97dccf470094d4f680e3e64482f2bf97c54cf302a6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/tlinfo.h"
+          },
+          "hashes": {
+            "sha-256": "d6c204872ba3bfa4fddb7f4ac9bca39a957a5448b48fbb05e8ae5b238015af81"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/deviceclass.h"
+          },
+          "hashes": {
+            "sha-256": "cd369d742dc9eef5507e2909140acfe00e42448a6b6100b9cb06bc90e7f4160f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/deviceinfo.h"
+          },
+          "hashes": {
+            "sha-256": "32ea365d9783fca772bf207b7c5dd389db14175fda5d9f9315dd7b860993e55c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/container.h"
+          },
+          "hashes": {
+            "sha-256": "c839e6a3021988cec33f5a8a061be3ad37c295010fe76a0d132a66cde117c200"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/interfaceinfo.h"
+          },
+          "hashes": {
+            "sha-256": "1fc25661372c77ac2dd6da30cc911630f3281bd6595e082eb0f6d9f55be9cd70"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/staticdefectpixel.h"
+          },
+          "hashes": {
+            "sha-256": "dac5fa9b22064f669fd84fd15e56136f0cc9712c0f2d6aae626783af4bf0e2a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/devicefactory.h"
+          },
+          "hashes": {
+            "sha-256": "10cc0c75f82c200ddb1274369bf3093d3caa870d8b2bba624d9994d3a004260c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/deviceaccessmode.h"
+          },
+          "hashes": {
+            "sha-256": "af56e853bbe54f1ce4f61660556d4c9b8e3d8c1360a66216481301bca4b7e8a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonversionnumber.h"
+          },
+          "hashes": {
+            "sha-256": "24dc0e7c9323bf9ff2c6d0ce33fcea2c5fe987c93c721fe0ae39701937b1b903"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/transportlayer.h"
+          },
+          "hashes": {
+            "sha-256": "fdfcab5201ab823509ea596e657d3cd4b16c57b0fca6c0413d82517230a139d9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/interface.h"
+          },
+          "hashes": {
+            "sha-256": "b9350a828ecf98b4d9a49659f3968ebf276587c79a16d4430e982134c76e97c7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/tlfactory.h"
+          },
+          "hashes": {
+            "sha-256": "9fc5286cd886e2882f50c5d95542628edb3c6d1a6a92583a90213f29ad7156c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/eventadapter.h"
+          },
+          "hashes": {
+            "sha-256": "5cc80ee5683c6105ff831cd55026ae890ecae33ffec0ae48ca98803c7a8ac256"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/callback.h"
+          },
+          "hashes": {
+            "sha-256": "542db51c8d6a7ef6057508a8930f80d61d48037e918e65b8f053103adca18662"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/device.h"
+          },
+          "hashes": {
+            "sha-256": "781225dc539cfef8eeb9fd053a5ba18b191e3dc9e0622421f8a5dcb297d97e45"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/waitobject.h"
+          },
+          "hashes": {
+            "sha-256": "e309c0311a0a159f3ded9bd55f7d852e4202804e218112f02c9b777e8568bae5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/waitobjects.h"
+          },
+          "hashes": {
+            "sha-256": "791725a5dfd1f52b102e579b8b64d64acda0d6d2b70fdc8b8923a1dac80993d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/streamgrabber.h"
+          },
+          "hashes": {
+            "sha-256": "01f46abcc62ec2f7f2f2fb362786f0de6bde705261e56837bcf42245d634d295"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pixeltype.h"
+          },
+          "hashes": {
+            "sha-256": "05e49378230b075cd80afd681a122fb1d3da37f4e58539659beb42fbf3382aa0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pixel.h"
+          },
+          "hashes": {
+            "sha-256": "63f2a55dd19236eb1d095c1912ab6608d6e6b1c91271f89ee592db6ea8f6b456"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pixeltypemapper.h"
+          },
+          "hashes": {
+            "sha-256": "3218c919f5419beec914214f3109f1b7f5d79d19c5d0cc8b056aaf0cfacf9e4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/ienumerationt.h"
+          },
+          "hashes": {
+            "sha-256": "dbdd9b729a23ec9309de34ae716aeba4b9988754fd1621f30e5a71a01944d4a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/genapi/compatibility.h"
+          },
+          "hashes": {
+            "sha-256": "ba72e48fe1719bf5e9644e26572d0e725f8ad77a85fca58a9f4d03c7d53133c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/result.h"
+          },
+          "hashes": {
+            "sha-256": "70e73aa69b34d2c63e1c4281f02de7726fea994151ff117af6b304669ec67b16"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/payloadtype.h"
+          },
+          "hashes": {
+            "sha-256": "ee1551dd91080b38abe8b43347f8a2656a5a8a80d31594555a22642b2117cb79"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/resultimage.h"
+          },
+          "hashes": {
+            "sha-256": "d6e4f42c91aa508ace9b28107dce62ce2f555bf4a1689982c2a4f8da2c82a4fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/image.h"
+          },
+          "hashes": {
+            "sha-256": "1dcee3db9c804b8fb3771b1c33d8955a71d57ca2a0daf30274288e6bb5dd6420"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylondatacomponent.h"
+          },
+          "hashes": {
+            "sha-256": "139f92aad16c43a973423a3e415d1002799aba0183f3966bcf3ca401eaa982b6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylondatacontainer.h"
+          },
+          "hashes": {
+            "sha-256": "db240dfd9c6e08f3f4dd4ca6e55495cdc18524221c4123c47fa2451311fcfbb3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/chunkparser.h"
+          },
+          "hashes": {
+            "sha-256": "662b71ea467850c87f10856df42137c64c83fe932541cbd80c6f218274240995"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/eventgrabber.h"
+          },
+          "hashes": {
+            "sha-256": "45993bc8e64f60229b426b841a7d78e7d19cf606257c20b4ea68925e1daf31f3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/eventgrabberproxy.h"
+          },
+          "hashes": {
+            "sha-256": "c19dfdd31291051ad43e068128f07d6a9f2ca27207f9dcd68dc1e408599ec18f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/nodemapproxy.h"
+          },
+          "hashes": {
+            "sha-256": "7ae5fcabe7a10881b3b179b686392d3b8464d8674bc364a0e7beb36943e34a9d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/acquiresingleframeconfiguration.h"
+          },
+          "hashes": {
+            "sha-256": "4d601323a04332c4a0e6411a94c7a268efcbe69b83340919f5d6920060b7a910"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/instantcamera.h"
+          },
+          "hashes": {
+            "sha-256": "2c7998e0dbe311aaff1eebd12eec79eb20cb5a14211fade97c97d8f5896e1f4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/imageeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "3c632b28da24ac190d93ce99dde4e4418f597e48bb363fa06bd2d059d4cddd4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/grabresultptr.h"
+          },
+          "hashes": {
+            "sha-256": "cbf374d080d395d19d424710508d03719f43190be753a6cca1677be05c805fb6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/grabresultdata.h"
+          },
+          "hashes": {
+            "sha-256": "94b860d0a5297fea84ac9fc372c192dec521fc4145b6df7c68596f1bc1c7f3fb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/configurationeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "08c8600a564aaccc116d0888e276251a6c8cbeb072b484d6e2b8de6e850fe70a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/cameraeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "570cd1b644a8a0a1192c9d498f2d7f4d23cffb52a017cec0f08af9cfcacfca56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/bufferfactory.h"
+          },
+          "hashes": {
+            "sha-256": "667a13d8e748adf1e4d38e507812b5023814acd461c246e5300f4642109810a1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/sfncversion.h"
+          },
+          "hashes": {
+            "sha-256": "9acd403e6f96f665ba3799b76b4f16651143ea2aff7555aace11d3f8c7222bb2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/ecleanup.h"
+          },
+          "hashes": {
+            "sha-256": "264f32eedf5a5bac0780f68d1f9414b50fdda838852426c98a34518cc31fb139"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/eregistrationmode.h"
+          },
+          "hashes": {
+            "sha-256": "77c042121558df03dfc5471189f3cf2ab01a8719d8914465aad2c47b296bb839"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/etimeouthandling.h"
+          },
+          "hashes": {
+            "sha-256": "8558c24073e91171cebe38a92adfcc5d8f2bae77d0e2a18b43bf8ab2c4514a79"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_instantcameraparams.h"
+          },
+          "hashes": {
+            "sha-256": "760ca3c55cefc99733cd30c39ddce15a7b350b2ade700dabbaa79a78f3c70c64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/parameterincludes.h"
+          },
+          "hashes": {
+            "sha-256": "d9f67fbfc735d1769d8b9f6279bbd4ae01be7c63ed1fdf7821357327a76b3a5f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/arrayparameter.h"
+          },
+          "hashes": {
+            "sha-256": "dc63d4c1e51feaa926879a5f26f4208be9bb8bdc5eb341e499fefcdc37104931"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/parameter.h"
+          },
+          "hashes": {
+            "sha-256": "3dee77d794f9f12f475e06703e26af92369c2b4ef624f23636fbc8e9ae06ab74"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/booleanparameter.h"
+          },
+          "hashes": {
+            "sha-256": "19f6b515e1de11073c9ed43683d6ce0ba3718b35db2832c98a6f8691ad34b7a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/commandparameter.h"
+          },
+          "hashes": {
+            "sha-256": "ec99a34a2fc6e46692d21c1880610a1314338a6bb6f1e132167868e328076a1a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/enumparameter.h"
+          },
+          "hashes": {
+            "sha-256": "30839eaa1cc096ed8d6b2c22449d732bd58800894a5950663460bf23ffcc3a29"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/floatparameter.h"
+          },
+          "hashes": {
+            "sha-256": "a000d3d3ec40c395c1e833fa12a98418db20d99efa4ad26ebf2bb586ef8f950a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/integerparameter.h"
+          },
+          "hashes": {
+            "sha-256": "6fd88eca496f2f27983de9df363a1c6835fef00c0dde7ef11627b967383fdabb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/stringparameter.h"
+          },
+          "hashes": {
+            "sha-256": "913f3955f5f5b17fa3f002eb040b6b6c87580c233c497443815ed5e0c28548f7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/enumparametert.h"
+          },
+          "hashes": {
+            "sha-256": "80381776bf1e2b32130adcc2c7502da3140933f2edcef08ad4c5c62811444617"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/configurationhelper.h"
+          },
+          "hashes": {
+            "sha-256": "8512b340efe6a4f128f40ae7253a0cee498bf34fdc3fa49c8581c2c440997409"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/instantcameraarray.h"
+          },
+          "hashes": {
+            "sha-256": "0e0eea504aba9500374f38cf8c9bed7c24b9b8e8fa68fe314e1fa79621d2e8fb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/acquirecontinuousconfiguration.h"
+          },
+          "hashes": {
+            "sha-256": "0d4882bac5ec58e25281d98316e9414769ed22a4f88922d693bbf2c642d6093f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/softwaretriggerconfiguration.h"
+          },
+          "hashes": {
+            "sha-256": "b12a77ddc2ed80e3e240d789ecadbfea10be360a5ce370510cfc8c6f117286e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/instantinterface.h"
+          },
+          "hashes": {
+            "sha-256": "22f9bb26c8509f215204c0d29a8a1af889aee41230c4172183c5b03be9b09d5e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversalinterfaceparams.h"
+          },
+          "hashes": {
+            "sha-256": "6407d704a7c32fb49cf1635747fdb35e253a8cdad916dc59d2c6438e50c353bf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonutilityincludes.h"
+          },
+          "hashes": {
+            "sha-256": "c2b180027cdd5eef28a73906fbf907b06f954180b8f347d6f7605e87c7636b2c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonutility.h"
+          },
+          "hashes": {
+            "sha-256": "05dd68cc46fc43d06f42261b740d2536dde14a5e65d61cc8ad4e68ca25cbc117"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonimage.h"
+          },
+          "hashes": {
+            "sha-256": "79e61f78391d12e8a0963a6f3becdc95dd5e21155db208a83b966218afd659cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonimagebase.h"
+          },
+          "hashes": {
+            "sha-256": "f7bb26c47cbd9132f163d5bfeb7cbe1a3a45549dc86c9f6973fe69c3b467c2c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/reusableimage.h"
+          },
+          "hashes": {
+            "sha-256": "4603794746e0f6dfc87e158d86c48ced7d93af0195787320fe11704e889030a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/imagepersistence.h"
+          },
+          "hashes": {
+            "sha-256": "2de17a9abedf80955ed34a4137a9fece7267acc2a23f14b153c542a5a4f230ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pixeldata.h"
+          },
+          "hashes": {
+            "sha-256": "36cd6bfd5ba81caf7d1124d757f5fe5d44bbf788dfb2dc02d0b72cde4f3c3f9e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonimageuserbuffereventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "ef680774beb841f7070f9e20c5061929033b61c9fd3bc77c9abb2f26aa96f180"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/imagedecompressor.h"
+          },
+          "hashes": {
+            "sha-256": "fee2cb262efb457b383cb1bd16c2bca683bb30f57635a0812496d7db3db4dbdf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/imageformatconverter.h"
+          },
+          "hashes": {
+            "sha-256": "eaeafb01dd9ae18bb9ba82c7fed7a3cfe4e4e4e85b4c2d407e1882b92987d510"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_imageformatconverterparams.h"
+          },
+          "hashes": {
+            "sha-256": "917cb8605c9838d3a34afa31289ec2530ecc5766527fe874d866e644c237d9be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/featurepersistence.h"
+          },
+          "hashes": {
+            "sha-256": "cf38a54abc822a484956fa17516eba0e26f3e1eacaf584ae67f5933b46d831e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylonbitmapimage.h"
+          },
+          "hashes": {
+            "sha-256": "f4a2df2638997022fedba0bc04d8a08bb5197b2b55df8283bbd685b97528c10c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/aviwriter.h"
+          },
+          "hashes": {
+            "sha-256": "4e4aed263151eb9500ae862aebbeba1b132a1931151dc891b673bb717973a5fe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/videowriter.h"
+          },
+          "hashes": {
+            "sha-256": "89103d52bfc57ae825b085eacf1f5a2939699e5c448141715bf6a4d60b08496a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_videowriterparams.h"
+          },
+          "hashes": {
+            "sha-256": "78364b8df95cf552c1d61e8c935297c6464cf8a7462a0f56627be32c8abcaa5c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/pylongui.h"
+          },
+          "hashes": {
+            "sha-256": "c2ba1435f36af20ef74773b33fb19b9967fab38583046dd930cf8abe1a32455d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalinstantcamera.h"
+          },
+          "hashes": {
+            "sha-256": "1573de6288fc757299fccd389e8f2e647af8138a66c064bb4f8450874958f296"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversalcameraparams.h"
+          },
+          "hashes": {
+            "sha-256": "fff1dd1fce480f34d8117ecf4fd50cdd657b433bdd941826adfcc6c1564d3869"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversalstreamparams.h"
+          },
+          "hashes": {
+            "sha-256": "2f636188456df6a06e5a13b981075bbfa84c97f60dc72d081cd61b54da14c0a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversaleventparams.h"
+          },
+          "hashes": {
+            "sha-256": "c8d202ed3f0c98c4240e08b05c9401b18b598edad2f3ab78679f04c9e3939264"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversaltlparams.h"
+          },
+          "hashes": {
+            "sha-256": "f9c52344b5722674e891739ef693b4730b1d948afad93c208880523f8346b7e9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalconfigurationeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "c0993e792276e7cb8212ad0cc61351341eb95695bd67b6a388daed43e3229c3a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalimageeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "51c6f79b73fa8bdaea0930543b1177c3a12e5965ef7a00df3f3ffbd607fde55f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalgrabresultptr.h"
+          },
+          "hashes": {
+            "sha-256": "b17e30ff259e0dd31337a2fbb0a9a1997e301a02fd50bfc1effb13d7257634e4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalgrabresultdata.h"
+          },
+          "hashes": {
+            "sha-256": "eb77d07a2267385d344e05dc067bdac8d9ae8109ad26e16b94ae224c85717ecf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/_basleruniversalchunkdataparams.h"
+          },
+          "hashes": {
+            "sha-256": "0a2a263a71c66c141fa3eb38a4be3fd8e272b9bb645a8f642f21638859604f8b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/private/devicespecificgrabresultptr.h"
+          },
+          "hashes": {
+            "sha-256": "4e0bb97dc41473f285cf9bd0580a2bca1adc46743c8caf20177d7c975f2057a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/basleruniversalcameraeventhandler.h"
+          },
+          "hashes": {
+            "sha-256": "bf6ac1602a87a9a306697f087f82f199f682392bfc393f0e38fc7609c658e246"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/private/devicespecificinstantcamera.h"
+          },
+          "hashes": {
+            "sha-256": "d300de811eec4f8346fe1250e8653c61fc7918f7c97c5a199e415f2b82b90fc2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/private/devicespecificconfigurationeventhandlertie.h"
+          },
+          "hashes": {
+            "sha-256": "ed634fad73605c27a7afbae75da310f01b9a861cdf500fa74eb15ee932311236"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/private/devicespecificimageeventhandlertie.h"
+          },
+          "hashes": {
+            "sha-256": "1263456fd30df721d455c7275f40cda99aaf98d853068b3a5d0ad3412921d370"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/private/devicespecificcameraeventhandlertie.h"
+          },
+          "hashes": {
+            "sha-256": "c3c43cbc2bf1aa5e2ffb656cb63eff39c6bcd4b0a4f6827f1fda9a166264b14b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/gige/pylongigedevice.h"
+          },
+          "hashes": {
+            "sha-256": "8a83ce31c8a09cc4b00e3417e12fb0466c917bf8ef43f7566b5f94fb91294223"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/basler/pylon 7/development/include/pylon/gige/pylongige.h"
+          },
+          "hashes": {
+            "sha-256": "60d5654ff72e10efefbe0c850a1411612729708447bd4b786885cd2b37edc9a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/cceelab/desktop/kaiheng9/boreoscope/image.h"
+          },
+          "hashes": {
+            "sha-256": "303c381a46fb70c7892658a79e140d3f3c08174ecb06be8f9ea433434b883368"
+          }
+        }
+      ]
+    }
+  ]
+}
